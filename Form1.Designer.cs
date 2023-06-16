@@ -37,6 +37,7 @@
             // 
             // pbxImagenOriginal
             // 
+            this.pbxImagenOriginal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbxImagenOriginal.Location = new System.Drawing.Point(74, 44);
             this.pbxImagenOriginal.Name = "pbxImagenOriginal";
             this.pbxImagenOriginal.Size = new System.Drawing.Size(300, 300);
@@ -59,6 +60,7 @@
             // 
             // pbxImagenDestino
             // 
+            this.pbxImagenDestino.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbxImagenDestino.Location = new System.Drawing.Point(472, 44);
             this.pbxImagenDestino.Name = "pbxImagenDestino";
             this.pbxImagenDestino.Size = new System.Drawing.Size(300, 300);

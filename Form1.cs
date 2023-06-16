@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,7 @@ namespace Cropper
         private void Form1_Load(object sender, EventArgs e)
         {
             // Carga la imagen de perfil de ejemplo
-            originalImage = Image.FromFile(@"..\..\Source\HombreFrente.png");
+            originalImage = Image.FromFile(@"..\..\Source\foto4.jpg");
             pbxImagenOriginal.Image = originalImage;
             pbxImagenOriginal.SizeMode = PictureBoxSizeMode.Zoom;
 
@@ -185,10 +186,23 @@ namespace Cropper
         private void cmdRecortar_Click_1(object sender, EventArgs e)
         {
             // Realiza el recorte de la imagen original
-            Bitmap croppedImage = new Bitmap(300, 300);
+            Bitmap croppedImage = new Bitmap(290, 290);
             using (Graphics g = Graphics.FromImage(croppedImage))
             {
-                g.DrawImage(originalImage, new Rectangle(0, 0, 300, 300), cropArea, GraphicsUnit.Pixel);
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+                // Crea una región elíptica para la máscara circular
+                GraphicsPath path = new GraphicsPath();
+                path.AddEllipse(10, 10, 280, 280);
+                g.SetClip(path);
+
+                // Dibuja el borde alrededor de la imagen recortada
+                Pen borderPen = new Pen(Color.Black, 8f);
+                g.DrawEllipse(borderPen, 9, 9, 282, 282);
+
+
+                // Dibuja la imagen original recortada en la forma circular
+                g.DrawImage(originalImage, new Rectangle(0, 0, 290, 290), cropArea, GraphicsUnit.Pixel);
                 pbxImagenDestino.Image = croppedImage;
             }
         }
