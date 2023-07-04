@@ -32,7 +32,7 @@
             this.cmdRecortar = new System.Windows.Forms.Button();
             this.pbxImagenDestino = new System.Windows.Forms.PictureBox();
             this.pbxFinal = new System.Windows.Forms.PictureBox();
-            this.btnSubirImagen = new System.Windows.Forms.Button();
+            this.cmdSubirImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenOriginal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenDestino)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFinal)).BeginInit();
@@ -47,6 +47,8 @@
             this.pbxImagenOriginal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxImagenOriginal.TabIndex = 0;
             this.pbxImagenOriginal.TabStop = false;
+            this.pbxImagenOriginal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxImagenOriginal_MouseDown);
+            this.pbxImagenOriginal.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxImagenOriginal_MouseUp);
             // 
             // cmdRecortar
             // 
@@ -56,6 +58,7 @@
             this.cmdRecortar.TabIndex = 2;
             this.cmdRecortar.Text = "Recortar";
             this.cmdRecortar.UseVisualStyleBackColor = true;
+            this.cmdRecortar.Click += new System.EventHandler(this.cmdRecortar_Click);
             // 
             // pbxImagenDestino
             // 
@@ -77,14 +80,15 @@
             this.pbxFinal.TabIndex = 0;
             this.pbxFinal.TabStop = false;
             // 
-            // btnSubirImagen
+            // cmdSubirImagen
             // 
-            this.btnSubirImagen.Location = new System.Drawing.Point(47, 365);
-            this.btnSubirImagen.Name = "btnSubirImagen";
-            this.btnSubirImagen.Size = new System.Drawing.Size(75, 23);
-            this.btnSubirImagen.TabIndex = 2;
-            this.btnSubirImagen.Text = "Recortar";
-            this.btnSubirImagen.UseVisualStyleBackColor = true;
+            this.cmdSubirImagen.Location = new System.Drawing.Point(47, 365);
+            this.cmdSubirImagen.Name = "cmdSubirImagen";
+            this.cmdSubirImagen.Size = new System.Drawing.Size(300, 23);
+            this.cmdSubirImagen.TabIndex = 2;
+            this.cmdSubirImagen.Text = "Subir imagen";
+            this.cmdSubirImagen.UseVisualStyleBackColor = true;
+            this.cmdSubirImagen.Click += new System.EventHandler(this.cmdSubirImagen_Click);
             // 
             // Form1
             // 
@@ -92,7 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 527);
             this.Controls.Add(this.pbxImagenDestino);
-            this.Controls.Add(this.btnSubirImagen);
+            this.Controls.Add(this.cmdSubirImagen);
             this.Controls.Add(this.cmdRecortar);
             this.Controls.Add(this.pbxFinal);
             this.Controls.Add(this.pbxImagenOriginal);
@@ -113,7 +117,7 @@
         private System.Windows.Forms.Button cmdRecortar;
         private System.Windows.Forms.PictureBox pbxImagenDestino;
         private System.Windows.Forms.PictureBox pbxFinal;
-        private System.Windows.Forms.Button btnSubirImagen;
+        private System.Windows.Forms.Button cmdSubirImagen;
     }
 }
 
