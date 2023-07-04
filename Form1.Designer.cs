@@ -38,9 +38,9 @@
             // pbxImagenOriginal
             // 
             this.pbxImagenOriginal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxImagenOriginal.Location = new System.Drawing.Point(74, 44);
+            this.pbxImagenOriginal.Location = new System.Drawing.Point(47, 44);
             this.pbxImagenOriginal.Name = "pbxImagenOriginal";
-            this.pbxImagenOriginal.Size = new System.Drawing.Size(300, 300);
+            this.pbxImagenOriginal.Size = new System.Drawing.Size(150, 150);
             this.pbxImagenOriginal.TabIndex = 0;
             this.pbxImagenOriginal.TabStop = false;
             this.pbxImagenOriginal.Paint += new System.Windows.Forms.PaintEventHandler(this.pbxImagenOriginal_Paint_1);
@@ -50,7 +50,7 @@
             // 
             // cmdRecortar
             // 
-            this.cmdRecortar.Location = new System.Drawing.Point(358, 371);
+            this.cmdRecortar.Location = new System.Drawing.Point(199, 218);
             this.cmdRecortar.Name = "cmdRecortar";
             this.cmdRecortar.Size = new System.Drawing.Size(75, 23);
             this.cmdRecortar.TabIndex = 2;
@@ -61,9 +61,9 @@
             // pbxImagenDestino
             // 
             this.pbxImagenDestino.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbxImagenDestino.Location = new System.Drawing.Point(472, 44);
+            this.pbxImagenDestino.Location = new System.Drawing.Point(269, 44);
             this.pbxImagenDestino.Name = "pbxImagenDestino";
-            this.pbxImagenDestino.Size = new System.Drawing.Size(300, 300);
+            this.pbxImagenDestino.Size = new System.Drawing.Size(150, 150);
             this.pbxImagenDestino.TabIndex = 3;
             this.pbxImagenDestino.TabStop = false;
             // 
@@ -71,7 +71,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(449, 260);
             this.Controls.Add(this.pbxImagenDestino);
             this.Controls.Add(this.cmdRecortar);
             this.Controls.Add(this.pbxImagenOriginal);

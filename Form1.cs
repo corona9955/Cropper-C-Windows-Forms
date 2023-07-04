@@ -186,23 +186,23 @@ namespace Cropper
         private void cmdRecortar_Click_1(object sender, EventArgs e)
         {
             // Realiza el recorte de la imagen original
-            Bitmap croppedImage = new Bitmap(290, 290);
+            Bitmap croppedImage = new Bitmap(140, 140);
             using (Graphics g = Graphics.FromImage(croppedImage))
             {
                 g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
                 // Crea una región elíptica para la máscara circular
                 GraphicsPath path = new GraphicsPath();
-                path.AddEllipse(10, 10, 280, 280);
+                path.AddEllipse(10, 10, 130, 130);
                 g.SetClip(path);
 
                 // Dibuja el borde alrededor de la imagen recortada
                 Pen borderPen = new Pen(Color.Black, 8f);
-                g.DrawEllipse(borderPen, 9, 9, 282, 282);
+                g.DrawEllipse(borderPen, 9, 9, 132, 132);
 
 
                 // Dibuja la imagen original recortada en la forma circular
-                g.DrawImage(originalImage, new Rectangle(0, 0, 290, 290), cropArea, GraphicsUnit.Pixel);
+                g.DrawImage(originalImage, new Rectangle(0, 0, 140, 140), cropArea, GraphicsUnit.Pixel);
                 pbxImagenDestino.Image = croppedImage;
             }
         }
